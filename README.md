@@ -1,6 +1,6 @@
 # BryanSegundoParcialOperativos
 
-Tutorial de Ejecución
+## Tutorial de Ejecución
 
 Estudiante | Código
 --- | --- | ---
