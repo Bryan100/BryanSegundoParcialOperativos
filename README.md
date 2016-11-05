@@ -31,10 +31,19 @@ cd .../jenkinUser | Ir al directorio jenkinUser
 git clone https://github.com/Bryan100/BryanSegundoParcialOperativos.git  | Copiar los archivos del repositorio en la carpeta
 yum install git | Instalar la librería git, si es necesario
 
-4. Con los comandos anteriores debieron haber quedado los archivos de ejecución que contienen
-    los algoritmos de ejecución:
-        *URI.py
-        *comandos.py
+#### Una vez ejecutado los comandos anteriores, debieron haber quedado guardados los sgts archivos:
+
+Comando | Propósito
+--- | --- | ---
+URI.py | C
+comandos.py | Contiene los algoritmos de la aplicación
+
+Nombre Algoritmo-App | Parametros | Descripción
+--- | --- | ---
+darTodosArchivos | --- | Muestra todos los archivos que hay dnetro de la carpeta jenkinUser
+agregarArchivo | Nombre Del Documentos, Contenido del Documento | Genera, dentro de la carpeta jenkinUser, un archivo con extensión .txt
+borrarArchivo | Nombre Del Documentos + Extensión (Ej: .txt) | Elimina el archivo especificado, si existe, de la carpeta jenkinUser
+darRecientes | --- | Entrega todos los archivos que hay dentro de la carpeta jenkinUser, desde el más reciente hasta el más antiguo.
         
 5. Se asume que su maquina virtual tiene las librerias necesarias para configurar entornos virtuales. Cree un entorno virtual
     dentro de la carpeta "miDirectorio"
