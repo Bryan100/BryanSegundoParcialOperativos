@@ -6,16 +6,21 @@ Bryan Estiben Pérez Parra| 12203030
 
 ## Tutorial de Ejecución
 
-### URL Del Repositorio
+#### URL Del Repositorio:
 https://github.com/Bryan100/BryanSegundoParcialOperativos.git
 
-0. VErifique que la interfaz puente de su maquina esté arriba. De lo contrario, use
-### ifup ethx, "x" cambia segun sea su caso
+#### Paso 0. Inicie sesión en su Maquina Virtual (preferiblemente con la Consola de Putty.exe), ingresando su username y password.
 
-1. Inicie Sesión con su usuario y contraseña preferido
-
-2. Se sugiere que vaya a la carpeta /home y ahí creé un directorio y pongale nombre. En este tutorial asumiremos que
-el directorio se llamó "miDirectorio"
+#### Paso 1. Verificar que la interfaz-puente de la maquina virtual esté arriba. De lo contrario, ejecute el sgte comando:
+      ifup ethx, donde el caractér 'x' varía según el número asignado a la interface puente 
+      
+#### Paso 2. Ir a la carpeta /home y crear un directorio con el nombre "jenkinUser" (Ver Comandos Abajo):
+         - - - Para
+        
+## Comando | Propósito
+--- | --- | ---
+cd /home | Ir al directorio /home
+mkdir jenkinUser | Crear la carpeta "jenkinUser"
 
 ## mkdir miDirectorio
 
