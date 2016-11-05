@@ -15,12 +15,10 @@ https://github.com/Bryan100/BryanSegundoParcialOperativos.git
       ifup ethx, donde el caractér 'x' varía según el número asignado a la interface puente 
       
 #### Paso 2. Ir a la carpeta /home y crear un directorio con el nombre "jenkinUser" (Ver Comandos Abajo):
-         - - - Para
-        
-## Comando | Propósito
+ 
+Comando | Propósito
 --- | --- | ---
 cd /home | Ir al directorio /home
-mkdir jenkinUser | Crear la carpeta "jenkinUser"
 
 ## mkdir miDirectorio
 
