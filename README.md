@@ -19,6 +19,8 @@ https://github.com/Bryan100/BryanSegundoParcialOperativos.git
 Comando | Propósito
 --- | --- | ---
 cd /home | Ir al directorio /home
+mkdir jenkinUser | Crear la carpeta "jenkinUser"
+
 
 ## mkdir miDirectorio
 
