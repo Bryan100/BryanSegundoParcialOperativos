@@ -4,39 +4,42 @@ Estudiante | Código
 --- | --- | ---
 Bryan Estiben Pérez Parra| 12203030
 
-## Tutorial de Ejecución
+# Tutorial de Ejecución
+
+## Modulo 1: Configurar La Aplicación, dentro de la Maquina Virtual
 
 #### URL Del Repositorio:
 https://github.com/Bryan100/BryanSegundoParcialOperativos.git
 
 #### Paso 0. Inicie sesión en su Maquina Virtual (preferiblemente con la Consola de Putty.exe), ingresando su username y password.
 
-
 #### Paso 1. Verificar que la interfaz-puente de la maquina virtual esté arriba. De lo contrario, ejecute el sgte comando:
-      ifup ethx, donde el caractér 'x' varía según el número asignado a la interface puente 
+      $ ifup ethx, donde el caractér 'x' varía según el número asignado a la interface puente 
       
 #### Paso 2. Ir a la carpeta /home y crear un directorio con el nombre "jenkinUser" (Ver Comandos Abajo):
  
 Comando | Propósito
 --- | --- | ---
-cd /home | Ir al directorio /home
-mkdir jenkinUser | Crear la carpeta "jenkinUser"
+$ cd /home | Ir al directorio /home
+$ mkdir jenkinUser | Crear la carpeta "jenkinUser"
 
 
 #### Paso 3. Ubicarse dentro de la carpeta recien creada (jenkinUser) y clonar el repositorio nombrado ánteriormente (Verificar primero que la maquina virtual tiene instalado la librería de git)
 
 Comando | Propósito
 --- | --- | ---
-cd .../jenkinUser | Ir al directorio jenkinUser
-git clone https://github.com/Bryan100/BryanSegundoParcialOperativos.git  | Copiar los archivos del repositorio en la carpeta
-yum install git | Instalar la librería git, si es necesario
+$ cd .../jenkinUser | Ir al directorio jenkinUser
+$ git clone https://github.com/Bryan100/BryanSegundoParcialOperativos.git  | Copiar los archivos del repositorio en la carpeta
+$ yum install git | Instalar la librería git, si es necesario
 
 #### Una vez ejecutado los comandos anteriores, debieron haber quedado guardados los sgts archivos:
 
 Comando | Propósito
 --- | --- | ---
-URI.py | C
 comandos.py | Contiene los algoritmos de la aplicación
+URI.py | Contiene la configuración de las URI's que permiten consumir los servicios de la aplicación, desde un navegador.
+
+#### Los sgtes son los servicios que provee la aplicación, configurados dentro del archivo "comandos.py"
 
 Nombre Algoritmo-App | Parametros | Descripción
 --- | --- | ---
@@ -45,43 +48,36 @@ agregarArchivo | Nombre Del Documentos, Contenido del Documento | Genera, dentro
 borrarArchivo | Nombre Del Documentos + Extensión (Ej: .txt) | Elimina el archivo especificado, si existe, de la carpeta jenkinUser
 darRecientes | --- | Entrega todos los archivos que hay dentro de la carpeta jenkinUser, desde el más reciente hasta el más antiguo.
         
-5. Se asume que su maquina virtual tiene las librerias necesarias para configurar entornos virtuales. Cree un entorno virtual
-    dentro de la carpeta "miDirectorio"
+#### A partir de aqui, se asume que las librerias necesarias, para configurar entornos virtuales, están instaladas.
+
+#### Paso 4. Crear y Activar un entorno virtual. dentro de la carpeta "jenkinUser"
+Comando | Propósito
+--- | --- | ---
+$ cd .../jenkinUser | Ir al directorio jenkinUser
+$ virtualenv miAmbiente | Generar el Ambiente virtual
+$ . miAmbiente/bin/activate | Activar el Ambiente virtual creado
+
+#### Paso 5. Con el ambiente virtual activo, instalar la libreria Flask
+      $ pip install Flask
+
+#### Ahora dentro de la carpeta "jenkinUser" deberían estár 3 archivos importantes (Aunque podrían haber más)
+
+Archivo | Descripción
+--- | --- | ---
+comandos.py | Contiene los algoritmos de la aplicación
+URI.py | Contiene la configuración de las URI's que permiten consumir los servicios de la aplicación, desde un navegador.
+miAmbiente - Es el ambiente virtual creado, el cual me va a permitir subir los servicios, configurados en el archivo "URI.py", a la nube
+
+#### Paso 6. Dentro del archivo "URI.py", está configurado el puerto 8088 para escuchar las peticiones que hará el navegador de internet. Se recomienda verificar que dicho puerto está disponible y activo, para esto usar los sgts comandos:
     
-$ virtualenv miAmbiente
+Comando | Propósito
+--- | --- | ---
+$ cd /etc/sysconfig | Verificar que esté activo ejecute los siguientes comandos:
+$nano iptables | Entrar al editor de texto, para modificar la configuración de los puertos
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 8088 -j ACCEPT | Dentro del archivo "iptables", escribir esta linea para activar el puerto 8088, en caso de no estarlo. Si dicho puerto ya está siendo utilizado, escribir el nombre de otro que sí esté disponible y modificar el archivo URI.py, escribiendo el puerto nuevo a utilizar.
+service iptables restart" | Restaurar el archivo iptables, para que acepte y asimile los cambios
 
-6. Active el ambiente virtual creado
+#### Paso7. Con el ambiente virtual activado, procedemos a subir los servicios configurados a la nube:
+      $ python URI.py
 
-$ . miAmbiente/bin/activate
-
-Con el ambiente activo, instale la libreria Flask
-
-$ pip install Flask
-
-Ahora dentro de la carpeta "miDirectorio" deberían estár 3 archivos importantes (Anque pueden haber más)
-    - URI.py - Aqui estan configurardas las URL que se van a ejecutar desde un navegador
-    - comandos.py - Aqui se definen algunos subprocesos que son consumidos por el archivo URI.py
-    - miAmbiente - Es el ambiente virtual creado, el cual me va a permitir subir los servicios configurados en URI.py a la nube
-
-8. Dentro del archivo URI.py, está configurado el puerto 8088, para escuchar las peticiones que hará el navegador de internet. Se
-    recomiendo verificar que dicho puerto esté disponible y activo.
-    
-8.1 Para verificar que esté activo ejecute los siguientes comandos:
-## cd /etc/sysconfig
-## nano iptables
-Dentro del archivo "iptables" verificar que el puerto esté disponible para recibir las peticiones necesarias. En caso
-contrario, configurarlo escribiendo la siguiente linea de codigo: 
--A INPUT -m state --state NEW -m tcp -p tcp --dport 8088 -j ACCEPT
-
-En caso de que el puerto esté ocupado y por ende toque cambiarlo, se procede a modificar su numero en el archivo
-    URI.py y activarlo en el archivo iptables. Recuerde reiniciar el archivo con "service iptables restart", en caso de cambios
-
-9. Con el ambiente virtual activado, procedemos a ejecutar los siguientes comando:
-#python URI.py
-
-El servicio a esta alturas ya debería estár en la nube.
-
-10. Para saber que servicios provee los algoritmos confirgurados y como solicitarlos desde la extension Postman de google, se recomienda
-    ver el archivo "ContratoServicios.png"
-    
-11. Abra la extension Postman de Google Chrome y comience a jugar con los diferentes servicios.
+## Modulo 2: Ejecución y Prueba de La Solución
