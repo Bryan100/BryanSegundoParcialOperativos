@@ -75,7 +75,7 @@ Comando | Propósito
 $ cd /etc/sysconfig | Ir a la carpeta sysconfig, donde se encuentra el archivo para configurar los puertos
 $ nano iptables | Entrar al editor de texto, para modificar la configuración de los puertos
 -A INPUT -m state --state NEW -m tcp -p tcp --dport 8088 -j ACCEPT | Dentro del archivo "iptables", escribir esta linea para activar el puerto 8088, en caso de no estarlo. Si dicho puerto ya está siendo utilizado, escribir el nombre de otro que sí esté disponible y modificar el archivo URI.py, escribiendo el puerto nuevo a utilizar.
-service iptables restart" | Restaurar el archivo iptables, para que acepte y asimile los cambios
+service iptables restart | Restaurar el archivo iptables, para que acepte y asimile los cambios
 
 #### Paso 7. Con el ambiente virtual activado, procedemos a subir los servicios configurados a la nube:
       $ python URI.py
