@@ -11,6 +11,7 @@ https://github.com/Bryan100/BryanSegundoParcialOperativos.git
 
 #### Paso 0. Inicie sesión en su Maquina Virtual (preferiblemente con la Consola de Putty.exe), ingresando su username y password.
 
+
 #### Paso 1. Verificar que la interfaz-puente de la maquina virtual esté arriba. De lo contrario, ejecute el sgte comando:
       ifup ethx, donde el caractér 'x' varía según el número asignado a la interface puente 
       
@@ -22,15 +23,13 @@ cd /home | Ir al directorio /home
 mkdir jenkinUser | Crear la carpeta "jenkinUser"
 
 
-## mkdir miDirectorio
+#### Paso 3. Ubicarse dentro de la carpeta recien creada (jenkinUser) y clonar el repositorio nombrado ánteriormente (Verificar primero que la maquina virtual tiene instalado la librería de git)
 
-3. Ubiquese dentro del directorio recien creado y haga la clonación de este repositorio, de la
-    siguiente manera:
-    
-    A) cd miDirectorio
-    B) git clone https://github.com/Bryan100/EntregaParcialOperativos.git
-    https://github.com/Bryan100/BryanSegundoParcialOperativos.git
-Tip: Asegúrese que su maquina virtual tiene instalado la librería de Git
+Comando | Propósito
+--- | --- | ---
+cd .../jenkinUser | Ir al directorio jenkinUser
+git clone https://github.com/Bryan100/BryanSegundoParcialOperativos.git  | Copiar los archivos del repositorio en la carpeta
+yum install git | Instalar la librería git, si es necesario
 
 4. Con los comandos anteriores debieron haber quedado los archivos de ejecución que contienen
     los algoritmos de ejecución:
