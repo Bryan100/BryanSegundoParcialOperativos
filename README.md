@@ -35,7 +35,7 @@ $ cd .../jenkinUser | Ir al directorio jenkinUser
 $ git clone https://github.com/Bryan100/BryanSegundoParcialOperativos.git  | Copiar los archivos del repositorio en la carpeta
 $ yum install git | Instalar la librería git, si es necesario
 
-#### Una vez ejecutado los comandos anteriores, debieron haber quedado guardados los sgts archivos:
+#### Una vez ejecutado los comandos anteriores, debieron haber quedado guardados los sgts archivos (Almacenados en una carpeta llamada "BryanSegundoParcialOperativos"):
 
 Comando | Propósito
 --- | --- | ---
