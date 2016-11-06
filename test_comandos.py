@@ -52,4 +52,4 @@ def test_darTodos():
 
    cuartoMuestreo = len (darTodosArchivos());
 
-   return primerMuestreo == cuartoMuestreo and primerMuestreo + 2 == segundoMuestreo and primerMuestreo + 4 == tercerMuestreo
+   assert primerMuestreo == cuartoMuestreo and primerMuestreo + 2 == segundoMuestreo and primerMuestreo + 4 == tercerMuestreo
