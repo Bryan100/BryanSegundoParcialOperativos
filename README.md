@@ -90,7 +90,7 @@ borrarArchivo | Nombre Del Documentos + Extensión (Ej: .txt) | Elimina el archi
 
 Comando | Descripción
 --- | --- | ---
-$ pip install -U pytest | Instalar Pytest
+$ pip install -U pytest | Instalar Pytest, en caso no de no tenerlo importado en la maquina virtual 
 pytest --version | Verificar Instalación
 
 Una vez instalado el framework de pruebas, se puede ejecutar el archivo de pruebas "test_comandos.py", el cual permite hacer pruebas a las funciones descritas anteriormente. Dicho archivo contiene los sgts metodos:
