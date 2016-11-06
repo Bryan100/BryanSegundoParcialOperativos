@@ -48,7 +48,7 @@ README.md | Informe-Tutorial para ejecutar y probar la aplicación
 
 Nombre Algoritmo-App | Parametros | Descripción
 --- | --- | ---
-darTodosArchivos | --- | Muestra todos los archivos que hay dnetro de la carpeta jenkinUser
+darTodosArchivos | --- | Muestra todos los archivos que hay dentro de la carpeta jenkinUser
 agregarArchivo | Nombre Del Documentos, Contenido del Documento | Genera, dentro de la carpeta jenkinUser, un archivo con extensión .txt
 borrarArchivo | Nombre Del Documentos + Extensión (Ej: .txt) | Elimina el archivo especificado, si existe, de la carpeta jenkinUser
         
