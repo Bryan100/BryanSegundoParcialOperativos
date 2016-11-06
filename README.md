@@ -75,7 +75,7 @@ miAmbiente | Es el ambiente virtual creado, el cual me va a permitir subir los s
 
 #### Hasta este punto, ya están listos los archivos  con los servicios de la aplicación, los archivos con los algoritmos que permiten probar la eficacia de dichos servicios y el ambiente virtual que permite ejecutar los servicios definidos, por medio de la consola de python.
 
-## Modulo 2: Ejecución y Prueba de La Solución
+## Modulo 2: Prueba de La Solución, por medio de pytest
 
 Ya se tienen listos las sgts funciones, de nuestra aplicación:
 
@@ -113,6 +113,5 @@ test_darTodos | Se agregar y eliminan archivos durante toda la ejecución de est
 
 #### Una vez ejecutado el anterior comando, se puede ver los resultados de las pruebas (Ver Documento "Pantallazo de Pruebas.docx")
 
-## Modulo 3: Ejecución de la Solución, por medio de la consola de Python:
-
+## Modulo 3: Ejecución de la Solución, por medio de la consola de Python
 
