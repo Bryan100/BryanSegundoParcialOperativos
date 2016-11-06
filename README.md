@@ -164,3 +164,17 @@ Comando | Descripción
 3. exit() | Salir de la consola de python
 
 Dentro de la lista, que retorna la función darTodosArchivos(), el archivo llamado "minuevoArchivo.txt" YA NO debe estár, para poder concluir que el metodo borrarArchivo() fue exitoso.
+
+## Modulo 4: Servidor de Integración
+
+... 
+
+## Modulo 5: Anexos
+
+Los sgtes son otros archivos, dentro del repositorio que son importantes
+
+Nombre | Descripción
+--- | --- | ---
+comandos.py | Codigo Fuente de la Solución
+test_comandos.py | Codigo Fuente de las Pruebas de la Solución
+Pantallazos de Pruebas.docx | Informe con la descripción de las Pruebas, en diferentes casos y escenarios
