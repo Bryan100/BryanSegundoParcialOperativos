@@ -12,7 +12,7 @@ Bryan Estiben Pérez Parra| 12203030
 https://github.com/Bryan100/BryanSegundoParcialOperativos.git
 
 #### URL Del Archivo README.md
-https://github.com/Bryan100/BryanSegundoParcialOperativos/edit/master/README.md
+https://github.com/Bryan100/BryanSegundoParcialOperativos/blob/master/README.md
 
 #### Paso 0. Inicie sesión en su Maquina Virtual (preferiblemente con la Consola de Putty.exe), ingresando su username y password.
 
