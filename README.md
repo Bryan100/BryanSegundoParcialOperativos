@@ -82,9 +82,9 @@ Ya se tienen listos las sgts funciones, de nuestra aplicación:
 
 Nombre Algoritmo-App | Parametros | Descripción
 --- | --- | ---
-darTodosArchivos | --- | Muestra todos los archivos que hay dnetro de la carpeta jenkinUser
-agregarArchivo | Nombre Del Documentos, Contenido del Documento | Genera, dentro de la carpeta jenkinUser, un archivo con extensión .txt
-borrarArchivo | Nombre Del Documentos + Extensión (Ej: .txt) | Elimina el archivo especificado, si existe, de la carpeta jenkinUser
+darTodosArchivos | --- | Muestra todos los archivos que hay dnetro de la carpeta "BryanSegundoParcialOperativos"
+agregarArchivo | Nombre Del Documentos, Contenido del Documento | Genera, dentro de la carpeta "BryanSegundoParcialOperativos", un archivo con extensión .txt
+borrarArchivo | Nombre Del Documentos + Extensión (Ej: .txt) | Elimina el archivo especificado, si existe, de la carpeta "BryanSegundoParcialOperativos"
         
 #### Paso 0. Para ejecutar pruebas unitarias de las funciones anteriores, se requiere el framework de pytest. Para lo anterior, ejecutar los sgts:
 
@@ -97,17 +97,17 @@ Una vez instalado el framework de pruebas, se puede ejecutar el archivo de prueb
 
 Función / Metodo | Descripción
 --- | --- | ---
-test_agregar | Verifica si el metodo "agregarArchivo()", del archivo "comandos.py", genera y guarda un archivo .txt, dentro de la carpeta "jenkinUser"
-test_borrar | Verifica si el metodo "borrarArchivo(...)", del archivo "comandos.py", elimina el archivo especificado, de la carpeta "jenkinUser"
-test_darTodos | Verifica si el metodo "darTodosArchivos()", del archivo "comandos.py", genera un archivo, con el titulo y contenido especificado, dentro de la carpeta "jenkinUser"
+test_agregar | Verifica si el metodo "agregarArchivo()", del archivo "comandos.py", genera y guarda un archivo .txt, dentro de la carpeta "BryanSegundoParcialOperativos"
+test_borrar | Verifica si el metodo "borrarArchivo(...)", del archivo "comandos.py", elimina el archivo especificado, de la carpeta "BryanSegundoParcialOperativos"
+test_darTodos | Verifica si el metodo "darTodosArchivos()", del archivo "comandos.py", genera un archivo, con el titulo y contenido especificado, dentro de la carpeta "BryanSegundoParcialOperativos"
 
 Las funciones de prueba anteriores utilizan las sgts estrategias, para verificar que sus funciones respectivas cumplen con lo esperado
 
 Función | Estrategia
 --- | --- | ---
-test_agregar | Se le pide a la aplicación la cantidad inicial de archivos, que hay dentro de la carpeta "jenkinUser".Luego, se agrega un archivo, por medio de la función a probar.Finalmente, se verifica que: Cantidad final de archivos == La cantidad inicial + 1. Si lo anterior se cumple, la prueba fue exitosa, de lo anterior, fue fallida.
-test_borrar | Casi analogo a test_agregar(). Se le pide, a la aplicación, la cantidad inicial de archivos, que hay dentro de la carpeta "jenkinUser".Luego, se elimina un archivo, por medio de la función a probar. Finalmente, se verifica que la cantidad final de archivos == Cantidad Inicial - 1. Si lo anterior se cumple, la prueba fue exitosa, de lo anterior, fue fallida.
-test_darTodos | Se agregar y eliminan archivos durante toda la ejecución de esta función de prueba. A medida que se agregan/eliminan archivos durante el algoritmo, se hacen muestreos, por medio de la función a probar, de la cantidad de documentos respectiva que hay en la carpeta "jenkinUser". Por último, se comparan los muestreos y se verifica que sean coherentes con las acciones de agregar/eliminar que se hicieron a lo largo de todo el algoritmo, para indicar el exito o fallo de la prueba.
+test_agregar | Se le pide a la aplicación la cantidad inicial de archivos, que hay dentro de la carpeta "BryanSegundoParcialOperativos".Luego, se agrega un archivo, por medio de la función a probar.Finalmente, se verifica que: Cantidad final de archivos == La cantidad inicial + 1. Si lo anterior se cumple, la prueba fue exitosa, de lo anterior, fue fallida.
+test_borrar | Casi analogo a test_agregar(). Se le pide, a la aplicación, la cantidad inicial de archivos, que hay dentro de la carpeta "BryanSegundoParcialOperativos".Luego, se elimina un archivo, por medio de la función a probar. Finalmente, se verifica que la cantidad final de archivos == Cantidad Inicial - 1. Si lo anterior se cumple, la prueba fue exitosa, de lo anterior, fue fallida.
+test_darTodos | Se agregar y eliminan archivos durante toda la ejecución de esta función de prueba. A medida que se agregan/eliminan archivos durante el algoritmo, se hacen muestreos, por medio de la función a probar, de la cantidad de documentos respectiva que hay en la carpeta "BryanSegundoParcialOperativos". Por último, se comparan los muestreos y se verifica que sean coherentes con las acciones de agregar/eliminar que se hicieron a lo largo de todo el algoritmo, para indicar el exito o fallo de la prueba.
 
 #### Paso 1. Ya se tiene claridad del contenido del archivo "comandos.py", del archivo "test_comandos.py" y de la relación que hay entre ellos. Para ejecutar las pruebas, por medio de pytest, insertar el sgte comando:
     $ pytest -q test_comandos.py
@@ -127,34 +127,35 @@ Otra alternativa, para verificar si las funciones del archivo "comandos.py" est�
 #### Paso 2.A Verificar la función darTodosArchivos(). 
     $ darTodosArchivos()
     
-En la consola de debieron haber desplegado una lista, con los nombre de cada archivo que está dentro de la carpeta jenkinUser. Ahora procedemos a ejecutar los sgts comandos.
+En la consola de debieron haber desplegado una lista, con los nombre de cada archivo que está dentro de la carpeta "BryanSegundoParcialOperativos". Ahora procedemos a ejecutar los sgts comandos.
 
 Comando | Descripción
 --- | --- | ---
 exit() | Salir del entorno de python
-$ cd .../jenkinUser | Ubicarse en la carpeta "jenkinUser", en caso de no estár ubicado en ella
-$ ls | Enlistar los archivos de la carpeta "jenkinUser"
+$ cd .../BryanSegundoParcialOperativos | Ubicarse en la carpeta "BryanSegundoParcialOperativos", en caso de no estár ubicado en ella
+$ ls | Enlistar los archivos de la carpeta "BryanSegundoParcialOperativos"
 
 La función darTodosArchivos() y el comando "$ ls" debieron haber arrojado el mismo resultado. Si lo anterior ocurrió, la función darTodosArchivos() está haciendo su tarea correctamente.
 
 #### Paso 2.B Verificar la función agregarArchivo(String nombreArchivo, String contenido).
 Ejecutemos los comandos en el sgte orden (Aquí se asume que la función darTodosArchivos() provee los servicios esperados) :
 
-Precondición: El archivo llamado "miNuevoArchivo.txt" NO existe dentro de la carpeta "jenkinUser"
+Precondición: El archivo llamado "miNuevoArchivo.txt" NO existe dentro de la carpeta "BryanSegundoParcialOperativos"
 
 Comando | Descripción
 --- | --- | ---
 0. Paso 0 y Paso 1 | Pasos del modulo 3 (Recordatorio)
-1. agregarArchivo("miNuevoArchivo", "...") | Agrega un archivo a la carpeta jenkinUser
+1. agregarArchivo("miNuevoArchivo", "...") | Agrega un archivo a la carpeta BryanSegundoParcialOperativos
 2. darTodosArchivos() | Entrega todos los archivos
 3. exit() | Salir de la consola de python
+4. cat miNuevoArchivo.txt |  Muestra el contenido de un Archivo
 
 Dentro de la lista, que retorna la función darTodosArchivos(), debe contener un elemento llamado "minuevoArchivo.txt", para poder concluir que el metodo agregarArchivo() es exitoso. Además, la función cat (paso 4) debió haber retornado el contenido que se envió como parametro a la función.
 
 #### Paso 2.C Verificar la función borrarArchivo(String nombreArchivo).
 Ejecutemos los comandos en el sgte orden (Aquí se asume que la función darTodosArchivos() provee los servicios esperados) :
 
-Precondición: El archivo llamado "miNuevoArchivo.txt" YA existe dentro de la carpeta "jenkinUser"
+Precondición: El archivo llamado "miNuevoArchivo.txt" YA existe dentro de la carpeta "BryanSegundoParcialOperativos"
               Recuerde que el parametro de la función debe incluir la extensión del archivo (El nombre es insuficiente)
               
 Comando | Descripción
