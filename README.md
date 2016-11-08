@@ -178,5 +178,6 @@ Los sgtes son otros archivos, dentro del repositorio que son importantes
 Nombre | Descripción
 --- | --- | ---
 comandos.py | Codigo Fuente de la Solución
-test_comandos.py | Codigo Fuente de las Pruebas de la Solución
+test_comandos.py | Codigo Fuente de las Pruebas de la Solución en pytest
 Pantallazos de Pruebas.docx | Informe con la descripción de las Pruebas, en diferentes casos y escenarios
+Pantallazos Jenkins.rar | Pruebas con el Servidor de Jenkins
